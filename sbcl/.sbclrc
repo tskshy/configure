@@ -1,11 +1,11 @@
 ;;; swank for emacs slime to connect
-(load #P"/opt/slime-2.19/swank-loader.lisp")
+(load #P"/opt/slime/swank-loader.lisp")
 (swank-loader:init)
 (swank:create-server :port 4005 :dont-close t)
 
 ;;; The following lines added by ql:add-to-init-file:
-#-quicklisp
-(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
-                                       (user-homedir-pathname))))
-  (when (probe-file quicklisp-init)
-    (load quicklisp-init)))
+;#-quicklisp
+;(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+;                                       (user-homedir-pathname))))
+;  (when (probe-file quicklisp-init)
+;    (load quicklisp-init)))
