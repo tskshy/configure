@@ -45,7 +45,12 @@ let g:user_emmet_expandabbr_key="<C-X>,"
 "inoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>	"gd组合按键跳转到定义或声明处
 
 "NERDTree 设置
+""" 忽略文件类型
 let NERDTreeIgnore=['\.pyc']
+"" 显示行号
+let NERDTreeShowLineNumbers=1
+"" 是否显示隐藏文件
+let NERDTreeShowHidden=1
 
 "nerdtree-git-plugin 配合nerdtree使用，注意两者的版本兼容问题
 let g:NERDTreeIndicatorMapCustom = {
