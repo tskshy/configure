@@ -1,0 +1,25 @@
+#!/usr/bin/env expect
+
+set timeout 60
+
+# 内网测试环境集群master-1 ssh登陆配置
+set host "192.168.59.3"
+set port 22
+set username "hadoop"
+set password "zhst123"
+
+
+spawn ssh -o ServerAliveInterval=60 -l ${username} ${host} -p ${port}
+
+expect {
+	"*password:" {
+		send "${password}\n"
+	}
+}
+
+#master
+expect {
+	"*]$*" {
+		interact
+	}
+}
